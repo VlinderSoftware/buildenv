@@ -25,7 +25,7 @@ RUN rm -fr boost_1_70_0
 RUN rm boost_1_70_0.tar.bz2
 
 # add libsodium
-RUN https://download.libsodium.org/libsodium/releases/LATEST.tar.gz
+RUN wget https://download.libsodium.org/libsodium/releases/LATEST.tar.gz
 RUN tar xzf LATEST.tar.gz
 WORKDIR libsodium-stable
 RUN ./configure --prefix=/usr
